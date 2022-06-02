@@ -17,6 +17,20 @@ function myFunction22A(a, b) {
 }
 
 function myFunction22B(a, b) {
+    let arr = a.split('');
+    let res = '';
+    let cont = 0;
+    for (let i = a.length - 1; i >= 0; i--) {
+        res += a[i];
+        if (cont % 3 === 2 && cont !== arr.length - 1) {
+            res += b;
+        }
+        cont++;
+    }
+    return res;
+}
+
+function myFunction22C(a, b) {
     let result = [];
     let rest = a;
     while (rest.length) {
