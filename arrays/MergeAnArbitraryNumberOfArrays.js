@@ -10,14 +10,22 @@ function myFunction15A(...arrays) {
 }
 
 function myFunction15B(...arrays) {
-    return [].concat(...arrays);
+    let res = [];
+    arrays.forEach(subarray => {
+        res.push(...subarray);
+    });
+    return res;
 }
 
 function myFunction15C(...arrays) {
-    return arrays[0].concat(arrays[1]);
+    return [].concat(...arrays);
 }
 
 function myFunction15D(...arrays) {
+    return arrays[0].concat(arrays[1]);
+}
+
+function myFunction15E(...arrays) {
     return arrays.flat();
 }
 
